@@ -23,7 +23,7 @@ spec:
         app.kubernetes.io/instance: insights-ingress-go
     spec:
       containers:
-      - image: image
+      - image: quay.io/redhat-user-workloads/rhtap-hcc-pipeline-tenant/insights-ingress-go/insights-ingress-go@sha256:01456e88802a929553a6cb2e0d9d269ea8dd51c0726a7c02010164383854b77b
         imagePullPolicy: Always
         name: container-image
         ports:
