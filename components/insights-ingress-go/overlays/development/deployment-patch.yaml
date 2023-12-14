@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: insights-ingress-go
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-user-workloads/rhtap-hcc-pipeline-tenant/insights-ingress-go/insights-ingress-go@sha256:01456e88802a929553a6cb2e0d9d269ea8dd51c0726a7c02010164383854b77b
+        name: container-image
+        resources: {}
+status: {}

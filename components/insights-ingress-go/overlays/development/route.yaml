@@ -1,0 +1,22 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: insights-ingress-go
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: insights-ingress-go
+    app.kubernetes.io/part-of: insights-ingress-go
+  name: insights-ingress-gotjzh
+spec:
+  port:
+    targetPort: 8000
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: insights-ingress-go
+    weight: 100
+status: {}
